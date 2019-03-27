@@ -1,0 +1,104 @@
+/**
+ * [常用色彩]
+ */
+@bg-default: #F3F3F3;
+@bg-white: #FFFFFF;
+@bg-orange: #E49A2D;
+
+@text-color-default: #080808;
+@text-color-white: #FFFFFF;
+@text-color-black: #000000;
+@text-color-gray: #A7A7A7;
+@text-color-input: #28354C;
+@text-color-placeholder: #C4C5CE;
+
+@border-default: #EBECF1;
+
+/**
+ * [常用Mixin]
+ */
+
+//超出省略号
+.text-ellipsis () {
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+//圆角
+.border-radius (@radius) {
+  -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+      border-radius: @radius;
+}
+
+//阴影
+.box-shadow (@h, @v, @blur, @spread, @color) {
+  box-shadow: @h @v @blur @spread @color;
+}
+
+//按钮公共样式
+.button-orange () {
+  background: #E49A2D;
+  color: @text-color-white;
+  display: block;
+  outline: none;
+  border: none;
+  font-size: 0.48rem;
+
+  &:active {
+    background: #ca8a2a;
+  }
+
+  .border-radius(0.1333rem);
+}
+
+//订单相关按钮
+.button-order () {
+  width: 2rem;
+  height: 0.8rem;
+  line-height: 0.7733rem;
+  text-align: center;
+  font-size: 0.32rem;
+  outline: none;
+  background: @bg-white;
+
+  &:active {
+    background: #F7F7F7;
+  }
+
+  .border-radius(0.4rem);
+}
+
+.fll{
+  float: left;
+}
+.flr{
+  float: right;
+}
+.white{
+  background: @bg-white;
+}
+i {
+  display: inline-block;
+  font-style: normal;
+  vertical-align: text-bottom;
+}
+.star_icon {
+  width: 187px;
+  height: 28px;
+  background: url('../images/star-all.png') no-repeat;
+  background-size: cover;
+}
+.star1 {
+  background-position: -158px 0;
+}
+.star2 {
+  background-position: -118px 0;
+}
+.star3 {
+  background-position: -80px 0;
+}
+.star4 {
+  background-position: -40px 0;
+}
